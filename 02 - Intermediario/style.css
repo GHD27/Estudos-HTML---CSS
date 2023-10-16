@@ -1,0 +1,132 @@
+/*Padding é o preenchimento da "caixa, ou seja a margem interna, e o margin, é a margem externa"*/
+
+body {
+  margin: 0;
+
+  font-family: 'Open Sans', sans-serif;
+
+  background: linear-gradient(180deg, rgba(227, 255, 248, 0) 82.08%, rgba(227, 255, 248, 0.38) 100%);
+
+  min-height: 100vh;
+}
+
+.page {
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 65px;
+}
+
+/*Utilizando display flex, ou caixa flexivel para alinhar os conteudos do meu header horizontalmente.
+justify-content space between para deixar cada um dos itens do header ficarem em uma das extremidades */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom:55px;
+
+}
+
+/*List Style, muda o estilo que vai apresentar na lista, o padrao do ul é disc (as bolinhas) aqui colocamos como none (nenhum estilo)
+Display: Flex, apresenta todos os itens um ao lado do outro
+gap é uma propriedade que pode ser utilizada quando está usando o display: flex, no caso ele cria um espaco entre os elementos*/
+ul{
+  list-style: none;
+  display: flex;
+  gap: 48px;
+  margin: 0px;
+  padding: 0px;
+}
+
+/*Aqui estou alterando a cor e retirando a linha de baixo do meu menu de navegação.*/
+ul li a{
+  color: #1F1534;
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+/*pseudo-class
+Aqui eu estou falando que, sempre quando eu passar o mouse por cima do elemento especificado a baixo, ele ira aplicar os estilos definidos*/
+ul li a:hover {
+  font-weight: bold;
+  opacity: 1;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*Alterando font do meu h1 e do meu ul*/
+h1, ul{
+  font-family: 'Mulish', sans-serif;
+}
+
+/*Alterando a propriedade do meu h1*/
+h1 {
+  font-size: 49px;
+  line-height: 56px;
+  color: #1F1534;
+
+  font-weight: normal;
+}
+
+/*Mudando especificamente a parte do texto ontem tem span*/
+h1 span{
+  color: #89C5CC;
+  font-weight: bold;
+}
+
+/*alterando as propriedades do meu paragrafo dentro da section*/
+section p{
+  font-size: 14px;
+  line-height: 28px;
+  color: #7D7987;
+
+  margin: 40px 0px
+}
+
+/*Propriedades do botao*/
+button {
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+
+  padding: 14px 32px 15px;
+  border-radius: 4px;
+  background: #69B99D;
+  border: 0px;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  
+  cursor: pointer;
+}
+
+button:hover{
+  background: #365c4e;
+}
+
+footer {
+ font-size: 14px;
+ line-height: 28px;
+ 
+ text-align: center;
+ margin-top: 80px;
+}
+
+/*Alterando as propriedes do link dentro do meu footer*/
+footer a{
+  font-weight: bold;
+  color: #1F1534;
+  text-decoration: none;
+}
+
+#balls {
+  position:fixed;
+  bottom: 0px;
+  right: 0px;
+}

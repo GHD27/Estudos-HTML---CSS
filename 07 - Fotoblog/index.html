@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<!--Fonts-->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<!-- general meta tags -->
+		<meta charset="utf-8" />
+		<meta name="author" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- site specific tags -->
+		<title>Fotoblog</title>
+
+		<!-- style sheets -->
+		<link rel="stylesheet" href="css-reset.css" />
+		<link rel="stylesheet" href="style.css" />
+
+		<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<div id="app">
+			<header class="container">
+				<nav>
+					<img src="./assets/camera.svg" alt="Ícone de camera" />
+
+					<ul>
+						<li>Home</li>
+						<li class="active">Galeria</li>
+					</ul>
+				</nav>
+
+				<form>
+					<div class="input-wrapper">
+						<label for="search">Pesquise por imagens e coleções</label>
+						<input id="search" type="text" placeholder="Pesquise por imagens e coleções" />
+					</div>
+				</form>
+
+				<img class="avatar" src="https://randomuser.me/api/portraits/women/10.jpg" alt="Imagem de uma mulher" />
+			</header>
+
+			<main>
+				<!--Deixando meu container dentro da main, assim consigo colocar o fundo cinza em todo o main porem deixando o conteudo centralizado-->
+				<div class="container">
+					<h1>Galeria</h1>
+
+					<!--Criando uma seção que vai conter minha galeria-->
+					<section class="gallery">
+						<!--Classe figure, que contem uma imagem junto com um nome-->
+						<figure class="item">
+							<img src="https://source.unsplash.com/random?a=1" alt="" />
+
+							<figcaption class="details">
+								<h2>Organização e grids</h2>
+
+								<div class="tags">
+									<span>tag</span>
+								</div>
+							</figcaption>
+						</figure>
+
+						<figure class="item" style="--delay: 0.6s">
+							<img src="https://source.unsplash.com/random?b=1" alt="" />
+
+							<figcaption class="details">
+								<h2>Organização e grids</h2>
+
+								<div class="tags">
+									<span>tag</span>
+								</div>
+							</figcaption>
+						</figure>
+
+						<figure class="item" style="--delay: 0.8s">
+							<img src="https://source.unsplash.com/random?c=1" alt="" />
+
+							<figcaption class="details">
+								<h2>Organização e grids</h2>
+
+								<div class="tags">
+									<span>tag</span>
+								</div>
+							</figcaption>
+						</figure>
+
+						<figure class="item" style="--delay: 1s">
+							<img src="https://source.unsplash.com/random?d=1" alt="" />
+
+							<figcaption class="details">
+								<h2>Organização e grids</h2>
+
+								<div class="tags">
+									<span>tag</span>
+								</div>
+							</figcaption>
+						</figure>
+
+						<figure class="item" style="--delay: 1.2s">
+							<img src="https://source.unsplash.com/random?e=1" alt="" />
+
+							<figcaption class="details">
+								<h2>Organização e grids</h2>
+
+								<div class="tags">
+									<span>tag</span>
+								</div>
+							</figcaption>
+						</figure>
+
+						<figure class="item" style="--delay: 1.4s">
+							<img src="https://source.unsplash.com/random?f=1" alt="" />
+
+							<figcaption class="details">
+								<h2>Organização e grids</h2>
+
+								<div class="tags">
+									<span>tag</span>
+								</div>
+							</figcaption>
+						</figure>
+
+						<figure class="item" style="--delay: 1.6s">
+							<img src="https://source.unsplash.com/random?g=1" alt="" />
+
+							<figcaption class="details">
+								<h2>Organização e grids</h2>
+
+								<div class="tags">
+									<span>tag</span>
+								</div>
+							</figcaption>
+						</figure>
+
+						<figure class="item" style="--delay: 1.8s">
+							<img src="https://source.unsplash.com/random?h=1" alt="" />
+
+							<figcaption class="details">
+								<h2>Organização e grids</h2>
+
+								<div class="tags">
+									<span>tag</span>
+								</div>
+							</figcaption>
+						</figure>
+
+						<figure class="item" style="--delay: 2s">
+							<img src="https://source.unsplash.com/random?i=1" alt="" />
+
+							<figcaption class="details">
+								<h2>Organização e grids</h2>
+
+								<div class="tags">
+									<span>tag</span>
+								</div>
+							</figcaption>
+						</figure>
+					</section>
+				</div>
+			</main>
+
+			<footer class="container">
+				<p>© 2023 - Gabriel HD Silva</p>
+			</footer>
+		</div>
+	</body>
+</html>

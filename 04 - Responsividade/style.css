@@ -1,0 +1,140 @@
+/*Tirando as medidas padroes que vem com o navegador*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*Muda o estilo da lista para nenhum (tirando as bolinhas que vem de padrao)*/
+ul {
+	list-style: none;
+}
+
+/*rem, aqui eu to mudando o tamanho padrao da pagina de 16px para 10px, assim fica mais simples transformar px em rem(medida flexivel, focado em acessibilidade)*/
+:root {
+	font-size: 62.5%; /* 10px */
+}
+
+/*60px = 6.0rem*/
+body {
+	font-family: 'Epilogue', sans-serif;
+	background: #ece9fd;
+
+	padding: 6rem 2.3rem 6.6rem;
+	font-size: 1.6rem;
+}
+
+main {
+	max-width: 33rem;
+	margin: 0 auto;
+}
+
+/*Mudando as propriedades do meu H1*/
+h1 {
+	font-weight: 800;
+	font-size: 4rem;
+	line-height: 4.8rem;
+
+	color: #090039;
+
+	margin-bottom: 1.5rem;
+}
+
+/*Mudando apenas o meu primeiro p*/
+main p:first-child {
+	color: #7158ef;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	line-height: 3.2rem;
+	margin-bottom: 1.7rem;
+}
+
+/*Mudando meu p que tem um H1 antes*/
+h1 + p {
+	color: rgb(10, 0, 57, 0.64);
+	line-height: 3.2rem;
+
+	margin-bottom: 3.2rem;
+}
+
+a {
+	color: #090039;
+
+	text-decoration: none;
+}
+
+/*Enquanto estiver com o mouse em cima*/
+a:hover {
+	color: #7158ef;
+	font-weight: bold;
+}
+
+/*Margin top do meu ul*/
+ul {
+	margin-top: 7.2rem;
+}
+
+/*Mudando o meu li, e alinhando os itens*/
+ul li {
+	font-size: 2.4rem;
+	font-weight: 700;
+	line-height: 3.2rem;
+
+	color: #090039;
+
+	max-width: 25.7rem;
+
+	display: flex;
+	align-items: center;
+	gap: 2.6rem;
+}
+
+/*Apenas o primeiro li*/
+ul li:first-child {
+	gap: 3.8rem;
+}
+
+/*Modificando o span dentro do meu li*/
+ul li span {
+	font-size: 7.2rem;
+	font-weight: 800;
+	line-height: 8rem;
+	letter-spacing: -2px;
+
+	color: #090039;
+}
+
+/*modificando apenas os li que tem um li antes*/
+ul li + li {
+	margin-top: 3.2rem;
+}
+
+/*media queries*/
+
+/*Quando meu dispositivo tiver um width de pelo menos 700px, aplica essas regras*/
+@media (min-width: 700px) {
+	body {
+		padding: 8rem;
+	}
+
+	main {
+		max-width: 1020px;
+		display: flex;
+		gap: 10rem;
+	}
+
+	/*modificando apenas o primeiro div do meu main, SELETORES*/
+	main > div {
+		max-width: 484px;
+	}
+
+	ul li {
+		gap: 5.3rem;
+		max-width: 450px;
+		align-items: center;
+	}
+
+	ul li:first-child {
+		gap: 6.6rem;
+	}
+}

@@ -1,0 +1,126 @@
+/*Padding é o preenchimento da "caixa, ou seja a margem interna, e o margin, é a margem externa"*/
+
+body {
+  margin: 0;
+
+  font-family: 'JetBrains Mono', monospace;
+
+  background: #2f2e41;
+}
+
+.page {
+  width: 1100px;
+  margin: 0 auto;
+  padding-top: 71px;
+}
+
+/*Utilizando display flex, ou caixa flexivel para alinhar os conteudos do meu header horizontalmente.
+justify-content space between para deixar cada um dos itens do header ficarem em uma das extremidades */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom:101px;
+
+}
+
+/*List Style, muda o estilo que vai apresentar na lista, o padrao do ul é disc (as bolinhas) aqui colocamos como none (nenhum estilo)
+Display: Flex, apresenta todos os itens um ao lado do outro
+gap é uma propriedade que pode ser utilizada quando está usando o display: flex, no caso ele cria um espaco entre os elementos*/
+ul{
+  list-style: none;
+  display: flex;
+  gap: 64px;
+  margin: 0px;
+  padding: 0px;
+}
+
+/*Aqui estou alterando a cor e retirando a linha de baixo do meu menu de navegação.*/
+ul li a{
+  color: #FFFFFF;
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+/*Deixando o meu menu em negrito quando o mouse é passado por cima*/
+ul li a:hover{
+  font-weight: bold;
+  opacity: 1;
+}
+
+/*Caixa que contem o conteudo principal da pagina*/
+main{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*Alterando valores do meu H1*/
+h1{
+ font-size: 36px;
+ line-height: 40px;
+ color: #FFFFFF;
+ text-align: center;
+ margin:0;
+}
+
+/*Deixando o SPAN do H1 de outra cor*/
+h1 span{
+  color: #00BFA6;
+  font-style: bold;
+}
+
+/*Mudando o estilo do meu paragrafo que se encontra dentro da secao*/
+section p{
+ font-family: 'Open Sans', sans-serif;
+ font-size: 16px;
+ line-height: 28px;
+ color: #C2C2C2;
+ text-align: center;
+ margin-top: 59px;
+}
+
+/* deixando o span dentro do paragrafo de outra cor e em negrito*/
+section p span{
+  color: #00BFA6;
+  font-style: bold;
+}
+
+/*Alterando propriedades do rodapé*/
+footer{
+ font-size: 14px;
+ line-height: 28px;
+ color: #FFFFFF;
+
+ margin-top: 157px;
+ text-align: center;
+}
+
+/*Aqui estou alterando a cor e retirando a linha do link.*/
+footer a{
+  color: #FFFFFF;
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+/*Deixando o meu menu em negrito quando o mouse é passado por cima*/
+footer a:hover{
+  font-weight: bold;
+  opacity: 1;
+}
+
+#pad{
+  position:fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+#line{
+  margin: 0px auto 27px;
+
+  opacity: 0.5;
+  border: 1px #00BFA6 solid;
+  width: 568px;
+  height: 0px;
+}

@@ -1,0 +1,84 @@
+/* Padronizando a fonte e o alinhamento de texto no corpo do meu site*/
+body {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+/* Ajustando a largura da div Main, e as suas margens*/
+#main{
+    width: 626px;
+    margin: 64px auto 64px;
+}
+
+/* Criando uma margem entre a imagem e o meu H1 */
+#main img{
+    margin-bottom: 32px;
+}
+
+/* Padronizando o texto dentro da H1 que está na main */
+#main h1{
+ font-family: 'Dosis', sans-serif;
+ font-size: 32px;
+ line-height: 40px;
+ font-weight: bold;
+ margin-bottom: 16px;
+ color: #3F3D56;
+ 
+}
+
+
+/* Mudando atributos do meu span dentro da H1 */
+h1 span{
+    color: #EE24FF;
+    font-weight: bold;
+}
+
+
+/* Padronizando o texto dentro do meu P, e setando a margem entre os paragrafos */
+#main p{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 32px;
+    color: #828282;
+}
+
+
+/* Margem entre o meu Footer e minha Wave */
+#footer{
+
+margin-bottom: 40px;
+}
+
+
+/* Padronizando o texto da minha footer, utilizando o text-decoration para tirar as linhas do hyperlink */
+#footer a{
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+    color: #3F3D56;
+    text-decoration: none;
+}
+
+
+/* Organizando a margem a esquerda entre os elementos do meu footer */
+#footer a + a{
+    margin-left:42px;
+}
+
+/* Criando uma linha, acima dos meus textos da footer */
+#line {
+    width: 391px;
+    height: 0px;
+    margin: 0px auto 16px;
+    border: 1px #eceff2 solid;
+}
+ /* Configurando a minha imagem Wave, fazendo com que ela sempre apareça na tela, e que o seu tamanho se ajuste com o monitor da pessoa que esta utilizando o site */
+#wave {
+    position:fixed;
+    bottom:0px;
+    width: 100%;
+    right:0px;
+    height: auto;
+}

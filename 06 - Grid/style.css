@@ -1,0 +1,82 @@
+/*Usando display grid no meu body, para alinhar o meu header com o meu main*/
+body {
+	background-color: #121214;
+	font-family: 'Mulish', sans-serif;
+	padding: 7.2rem 10.4rem;
+
+	display: grid;
+	justify-content: center;
+}
+
+/*Separando os itens do meu main por colunas, e colocando cada uma das divs com o tamanho de 370px*/
+main {
+	display: grid;
+	grid-template-columns: repeat(3, 37rem);
+	gap: 4.8rem 6rem;
+
+	margin-top: 6.2rem;
+}
+
+/*Formatacao do meu H2*/
+.card h2 {
+	color: #e1e1e6;
+	font-size: 3.5rem;
+	font-style: normal;
+	font-weight: 900;
+	line-height: normal;
+	padding: 2.4rem 3.2rem 0px;
+}
+
+/*Formatacao do meu P*/
+.card p {
+	color: #c4c4cc;
+	font-size: 1.9rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	padding: 2.4rem 3.2rem 3.2rem;
+}
+
+/*Formatacao do meu card*/
+.card {
+	border-radius: 8px;
+	border: 2px solid var(--platform-aliases-shape-terciria, #323238);
+	background: var(--platform-aliases-shape-principal, #202024);
+}
+
+/*Esticando a imagem para pegar toda a largura do card*/
+.card img {
+	width: 100%;
+}
+
+/*formatacao do H1 do header*/
+header h1 {
+	color: var(--brand-colors-explorer-mid, #02799d);
+
+	font-size: 5.8rem;
+	font-style: normal;
+
+	font-weight: 900;
+	line-height: normal;
+
+	margin-bottom: 8px;
+}
+
+/*Formatacao do H2 dentro do header*/
+header h2 {
+	color: var(--platform-aliases-ttulos, #e1e1e6);
+
+	font-size: 32px;
+	font-style: normal;
+
+	font-weight: 600;
+	line-height: normal;
+}
+
+@media (max-width: 1120px) {
+	main {
+		display: grid;
+		grid-template-columns: 37rem;
+		place-content: center;
+	}
+}

@@ -1,0 +1,61 @@
+/* Body seria minha pagina toda, com o text-align eu deixo tudo centralizado, e importanto as fontes para o meu site*/
+body {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+#hero{
+width: 592px;
+margin: 0 auto 72px;
+
+}
+
+#hero img {
+    margin-bottom: 72px;
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 49px;
+    line-height: 56px;
+    font-weight: normal;
+    margin-bottom: 32px;
+}
+
+h1 span {
+ font-weight: bold;
+}
+
+p, #footer {
+    color: #7D7987;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+#footer {
+    margin-bottom: 33px;
+}
+
+span, a {
+    color:orange;
+}
+
+/* Essa instrução eu estou especificando que eu quero o "a" que antes dele tenha outro "a"*/
+#footer a + a{
+    margin-left: 28px; 
+}
+
+/* Para referenciar um ID se uma #, para se referenciar uma class se uma "." */
+#line {
+    width: 568px;
+    height: 0px;
+    margin: 0 auto 8px;
+    border: 1px #eceff2 solid;
+}
+
+#balls {
+    position: fixed;
+    bottom:0px;
+    right: 0px;
+}

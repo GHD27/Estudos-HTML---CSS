@@ -1,0 +1,356 @@
+<!--
+    Aqui temos um arquivo HTML com diversas coisas basicas para se guiar no começo da jornda
+
+IDEX:
+01 - Html basico com um formulario e alguns fundamentos.
+02 - Html basico com Textos e alguns fundamentos.
+03 - Html basico com formulario um pouco mais avançado.
+04 - Html basico com lista.
+05 - Html basico com menu.
+-->
+
+
+
+
+
+
+<!-- Um HTML basico com um formulario dentro dele -->
+
+
+<!-- HEAD -->
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Main Page</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body>
+<!-- Aqui eu estou criando uma div, e dando uma classe para ela, assim facilitando a modificacao futura no CSS e Javascript-->
+    <div class="header">
+
+        <!--Colocando uma imagem no meu site, no caso na primeira DIV, que seria a Header-->
+        <img src="image/logo.png" />
+
+    </div>
+
+    <!--CONTAINER-->
+    <div class="conteiner-banner">
+        <!--Div que fica centralizada no meu conteiner, para manipular os elementos mais facilmente-->
+        <div class="center">
+            <!-- FORMULARIO -->
+            <div class="form">
+                <h2>Cadastro</h2>
+
+                <form>
+                    <!-- NOME -->
+                    <div class="input-conteiner">
+
+                        <label>Nome*</label>
+                        <input type="text" name="nome" required />
+
+                    </div>
+
+                    <!--EMAIL-->
+                    <div class="input-conteiner">
+
+                        <label>Email*</label>
+                        <input type="email" name="email" required />
+
+                    </div>
+
+                    <!--TELEFONE-->
+                    <div class="input-conteiner">
+
+                        <label>Telefone*</label>
+                        <input type="tel" name="telefone" required />
+
+                    </div>
+
+                    <!--Aviso de campo obrigatorio dentro do meu form-->
+                    <p class="warning"> * Campos Obrigatorios </p>
+
+                    <div class="input-submit-conteiner">
+
+                        <input type="submit" name="acao" value="Cadastrar" />
+
+                    </div>
+                </form>
+
+
+
+            </div> <!-- Fecha div FORM -->
+        </div> <!-- Fecha div CENTER -->
+    </div> <!-- Fecha div conteiner-banner-->
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- SEGUNDO EXEMPLO DE HTML, AGORA COM TEXTOS  -->
+</html>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Titulo do meu website</title>
+
+    <!--Maneira de chamar um arquivo externo, no caso estou chamando o .css-->
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!--ID deve ser atribuido apenas a um elemento, class pode ser atribuido para um grupo de elementos-->
+    <!--ID e CLASS tem funções similares-->
+    <div id="titulo" class="titulo">
+
+        <!--Titulo em H2(h1,h2,h3,h4... muda o tamanho da fonta, maior -> menor)-->
+        <h2>Titulo do meu texto</h2>
+
+    </div>
+
+        
+    <div id="corpo" class="corpo">
+
+        <!--Meu paragrafo, <b> negrito <i> italico <u> underline <span> igual mas sem quebra de linha <br> break (quebra de linha)-->
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu nulla ut tellus blandit sagittis. Suspendisse efficitur felis ac urna dapibus sollicitudin. Maecenas vestibulum rhoncus porta. Nam ultrices pharetra bibendum.
+            Praesent sagittis mollis maximus. In hac habitasse <b> platea dictumst. Duis sodales tincidunt gravida. </b> Quisque pulvinar vulputate eros, ac accumsan nisi auctor varius. Donec id tellus vel metus congue suscipit. Ut maximus odio enim,
+            eget tincidunt massa dignissim vel. Phasellus consectetur ipsum vitae nunc commodo, semper tincidunt nisl varius. Vivamus quis elementum nunc. Donec id auctor orci. Sed fermentum, nunc id faucibus porta, mauris quam dictum lectus,
+            non hendrerit risus metus a ligula. Morbi ut pellentesque turpis. Integer vestibulum porta vestibulum.
+        </p>
+
+        <!--Chamando uma imagem para o site-->
+        <img src="imagens/imagem.jpg" width="300" />
+
+        <br />
+
+        <!--Texto com link, caso queira abrir em uma nova guia -> a target = "_blank" href=...-->
+        <a href="http://www.google.com">link</a>
+    </div>
+   
+    <!--Tabelas-->
+    <table width="300" align="center" border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Cargo</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Gabriel</td>
+                <td>20</td>
+                <td>Programador</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--Formulario-->
+    <form>
+        <input type="text" />
+    </form>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Um exemplo de formulario-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Menu</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <form>
+        <fieldset>
+
+            <legend>formulario</legend>
+            <label>Dados Cadastrais</label>
+            <div><input type="text" name="nome" placeholder="Digite seu nome" required /></div>
+            <div><input type="email" name="email" placeholder="Digite seu Email" required /></div>
+            <div><input type="password" name="senha" placeholder="Digite uma senha de no minimo 8 digitos" minlength="8" required /></div>
+
+            <div>
+
+                <select name="lista">
+
+                    <option disabled selected>Cor de fundo</option>
+                    <option value="rosa">Rosa</option>
+                    <option value="aqua">Aqua</option>
+                    <option value="Blue">Blue</option>
+
+                </select>
+
+            </div>
+
+            <h5>Qual seu estado? </h5>
+
+            <div class="radio-input">
+
+                <div><input type="radio" name="estado" value="Sao Paulo" required /><span>Sao Paulo</span></div>
+                <div><input type="radio" name="estado" value="Rio de Janeiro" required /><span>Rio de Janeiro</span></div>
+                <div><input type="radio" name="estado" value="Minas Gerais" required /><span>Minas Gerais</span></div>
+
+            </div>
+
+            <h5>O que você prefere? </h5>
+
+            <div class="radio-input">
+
+                <div><input type="checkbox" name="preferencia[]" value="Salgado" /><span>Doce</span></div>
+                <div><input type="checkbox" name="preferencia[]" value="Doce" /><span>Salgado</span></div>
+
+            </div>
+
+            <h5>Nos diga quais os seus sonhos</h5>
+            <div>
+                <textarea name="sonhos" required> </textarea>
+            </div>
+
+            <div>
+                <input type="submit" name="acao" value="Enviar!" />
+            </div>
+        </fieldset>
+    </form>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Exemplo de listas-->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <title>Lista</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+
+    <!-- declaracao da lista-->
+    <ul class="lista">
+
+        <li>Produto 1</li>
+        <li>Produto 2</li>
+        <li class="item3">Produto 3</li>
+        <li>Produto 4</li>
+
+    </ul>
+
+
+    <ul class ="lista2">
+
+        <li>Produto 1</li>
+        <li>Produto 2</li>
+        <li class="item3">Produto 3</li>
+        <li>Produto 4</li>
+        
+    </ul>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Exemplo de menu-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Menu</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <div class="menu">
+
+        <a href="">home</a>
+        <a href="">produtos</a>
+        <a href="">sobre</a>
+        <a href="">contato</a>
+        <a href="">galeria</a>
+
+    </div>
+
+</body>
+
+</html>

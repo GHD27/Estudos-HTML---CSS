@@ -1,0 +1,21 @@
+/*Documento padrão, resetando o CSS e setando o meu root*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+	font-size: 62.5%;
+
+	/*Variáveis para serem utilizadas diversas vezes no meu projeto*/
+}
+
+html,
+body,
+input {
+	font-family: 'Poppins', sans-serif;
+}

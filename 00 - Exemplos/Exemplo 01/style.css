@@ -1,0 +1,729 @@
+/*SUMARIO
+   01- INDEX       (ID,CLASS, SINAIS)
+   02- MENU        (PRIORIDADES, MARGIN, PADDING, *)
+   03- TEXTO       (TUDO SOBRE A PERSONALIZACAO DE TEXTO, E COMO IMPORTAR FONTES)
+   04- LISTA       (UM POUCO MAIS SOBRE PRIORIDADE)
+   05- MIN-HEIGTH  (BOX-SIZING, MAIS UM POUCO SOBRE MARGIN E PADDING, DISPLAY E BORDER)
+   06- FLOAT       (DEFINICAO)
+   07- OVERFLOW    (DEFINICAO)
+   08- INHERIT     (HERDA DO PAI, INITIAL O QUE É)
+   09- ATRIBUTOS   (O QUE É [] E COMO UTILIZAR)
+   10- POSITION    (MANIPULAR A POSICAO DOS MEUS ELEMENTOS)\
+   11- BACKGROUND  (COMO MANIPULAR)
+   12- PSEUDOCLASS (COISAS COMO :HOVER, :CHECKED, ETC)
+   13- FORMULARIO  (CRIANDO UM FORMULARIO BONITINHO)
+   14- FORM_FILE   (PRÉ-FIXOS DOS NAVEGADORES, E O QUE É FOR(REFERENCIA, E SE TORNA AQUELA ACAO (HTML))
+*/
+
+
+/*index, ID, CLASS, sinal de >*/
+
+
+/*? Estilizando o h2 dentro da div com id(#) "titulo", caso queira chamar a classe da div, ao invez do #(id) coloca um .(class) ex: ".titulo" */
+
+#titulo h2 {
+    border: double;
+    border-color: aqua;
+    color: bisque;
+}
+
+/* Estilizando o h2 dentro da div com id "titulo", o sinal de > significa que ele vai modificar apenas o h2 dentro dessa div, caso tenha uma outra div dentro dela, e nessa contenha um h2, ela nao sera estilizada  */
+
+#titulo > h2 {
+    border: double;
+    border-color: aqua;
+    color: bisque;
+}
+
+.corpo p {
+    border: dotted;
+    border-color: crimson;
+    color: indigo
+}
+
+
+
+
+
+
+/* 02 */
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+/* MENU  margin, padding, prioridade*/
+
+/* margin atribui a todas as margens, sentido horario (topo, direita, baixo, esquerda) ou tambem colocar dois valores apenas (topo/baixo), (direita/esquerda), auto centraliza */
+
+.menu {
+    width: 900px;
+    background-color: burlywood;
+    margin: 0px auto;
+    text-align: center;
+}
+
+    .menu > a {
+        color: darkorange;
+        text-decoration: none;
+        font-size: 24px;
+        padding: 0px 10px 0px 10px;
+        border-left: 3px ridge darkorange;
+        border-right: 3px ridge darkorange !important;
+    }
+
+
+/* Aqui eu estou dizendo que eu quero que a minha div com a classe menu tenha esses atributos, por ser mais especifica do que a de cima, ela tem prioridade, entao sobreescreve os atributos do meu .menu, caso tenha duas iguais, ex: duas .menu, a mais em baixo que vai ter prioridade */
+
+
+/*  div.menu {
+}  */
+
+
+/* "*" significa que estou modificando todos os elementos, colocando margin (espacamento externo): 0 e o padding(espacamento interno) que sao basicamente espacamentos, significa que estou resetando as configuracoes padroes do meu navegador  */
+
+/*Eu tbm posso utilizar ele dessa maneira font > * (modifica todos as classes ligadas a fonte, ou até mesmo font *(Modifica tudo dentro da fonte)*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*E tambem posso colocar um !important no final, que idependente do nivel de prioridade, ele sempre ira executar*/
+
+
+
+
+
+
+/* 03 */
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/* TEXTO propriedades basicas da fonte, width e height (pode ser em px ou em %), como importar fontes personalizadas do google no HTML */
+
+/* Aqui definimos que a propriedade height vai pegar 100% (% é sempre em cima do elemento pai, ou seja da div, ou nesse caso, do proprio body)do meu body, ou seja a pagina inteira (janela do navegador por exemplo), entao quando eu vou definir ele, por exemplo no .texto, eu estou falando que quero que o height sera 80% do meu body, e nao 80% da minha div, como seria antes, assim preenchendo um espaco maior, nesse caso minha div estara herdando o height do body, o seu pai. */
+html, body {
+    height: 100%;
+}
+
+.texto {
+    margin: 20px auto;
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    background-color: #1f2c3e;
+}
+
+    .texto h1 {
+        color: #c4a320;
+        font-size: 48px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style: italic;
+        font-weight: normal;
+        letter-spacing: 8px;
+        /*  font-variant:small-caps; */
+    }
+
+    .texto p {
+        text-align: left;
+        color: #8be508;
+        font-size: 24px;
+        font-family: 'Metal Mania', cursive;
+        font-style: normal;
+        font-weight: lighter;
+        margin-top: 15px;
+        line-height: 32px;
+    }
+
+
+
+
+
+
+/* 04 */
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/* LISTA, prioridades */
+
+ul.lista, ul.lista2 {
+    list-style-position: inside;
+    list-style-type: georgian;
+}
+
+.lista li, .lista2 li {
+    font-size: 20px;
+    color: #8be508;
+    margin-top: 12px;
+}
+
+/* Ordem de prioridade, ".lista .item3" pois é o mais especifico, dentro da classe lista, mudar todos da classe item3, em seguida ".lista li", é intermediario, pois ele diz que, dentro da classe lista, mudar todos os itens(li) e por fim ".item3" é o que tem menos prioridade entre os exemplos ,pois ele abrange muitas coisas, todos da classe item3 nesse caso, caso a prioridade seja igual, o que esta mais em baixo é o que vai ser executado, ou seja quanto mais especifico o que vc quer modificar, mais prioritario sera. */
+
+.lista .item3, .lista2 .item3 {
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* 05 */
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* min-height, box-sizing, um pouco de margin e padding, display e border */
+
+/* min-height sempre sera o mais prioritario, min é usado em design responsivo, onde quando a tela fica menor, por exemplo nosso width tem 1280px, para o header n ficar estranho, por exemplo menor que o article quando redimensionar a tela, colocamos o min como 1280px, para quando ficar menor que 1280px, ele automaticamente adotar essa largura */
+.header {
+    width: 100%;
+    min-width: 1280px;
+    height: 200px;
+    background-color: aqua;
+}
+
+/* box-sizing: border-box  esta me dizendo que o espacamento interno (padding) que eu irei alterar, seja somente dentro da caixa, evitando que por exemplo, ela cresca de tamanho com o padding, ao invez de adicionar 30px por exemplo, ele vai 
+    ajustar o espacamento dentro da propria caixa */
+
+/*
+.center{
+    width:1280px;
+    margin: 0px auto;
+    box-sizing: border-box;
+    padding: 30px;
+    background-color:#29ff08;
+}
+
+.article{
+    background-color:#8be508;
+    margin-top:50px;
+}
+    */
+
+/*Display e tecnicas de espacamento*/
+
+.center {
+    box-sizing: content-box;
+    width: 1280px;
+    margin: 0 auto;
+    background-color: #29ff08;
+}
+
+/*RGBA sendo que o A é a transparencia, 0 ou 1*/
+
+/* display: none some totalmente com a box, nao computando seu espaco*/
+
+/* inline-block permite deixar os meus artigos lado a lado, mais ele coloca uma margem de 4px, por isso tiramos ela no margin-right, pois o tamanho do meu article é 640px, como sao dois, daria 1280px, o tamanho total do meu center, a box pai,para resolver isso, e colocar uma margem, uma resolucao possivel seria tirar width do article, por exemplo colocar 630px, me dando 10px para trabalhar, podendo assim colocar margin-right:5px, por exemplo (5px do artigo 1 + 5px do artigo 2 = 10px, total que eu liberei ao diminuir o width). */
+.article {
+    box-sizing: border-box;
+    border: 5px ridge darkorange;
+    margin-top: 30px;
+    margin: -4px;
+    display: inline-block;
+    vertical-align: top;
+    width: 640px;
+}
+
+
+
+
+
+
+/* 06 */
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/* Float */
+
+.pai {
+    width: 1280px;
+    padding: 20px 0;
+    margin: 0px auto;
+    background-color: aqua;
+}
+
+
+/* Float é basicamente um display inline-block, so que sem o espacamento de 4px, porem o pai nao considera que tem um float dentro dele, com isso pode acontecer do padding por exemplo, nao mostrar a borda de baixo, para resolver isso criamos uma classe clear, que limpa esse float, e faz o pai funcionar normalmente */
+.filho {
+    box-sizing: border-box;
+    width: 640px;
+    height: 300px;
+    background-color: darkblue;
+    float: left;
+    border: 1px solid black;
+}
+
+.clear {
+    clear: both;
+}
+
+
+
+
+
+
+/* 07 */
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* Overflow, o que deve acontecer quando o tamanho da borda pai é utrapassado */
+
+/*Overflow-x ou y para mudar apenas horizontal ou vertical (eixo x e eixo y) por padrao, caso eu declare um deles, o outro vem no automatico, que cria uma scrollbar */
+.box {
+    width: 300px;
+    height: 200px;
+    margin: 0px auto;
+    background-color: aqua;
+    overflow: auto;
+}
+
+
+
+
+
+
+/* 08 */
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/* Inherit -> herda o valor do pai , initial -> valor padrao */
+
+.box2 {
+    width: 400px;
+    height: 400px;
+    background-color: aqua;
+}
+
+.box3 {
+    background-color: red;
+}
+
+.box2 > .box3 > span {
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    background-color: inherit;
+}
+
+
+
+
+
+
+/* 09 */
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/* Atributos, [] especificando algo dentro de um atributo, por exemplo, todos os "a" que contenha um link (a [href]), pode tbm colocar um igual para especificar melhor, por exemplo, href = "https://www.bing.com/?cc=br". 
+   href*="google" busca palavra especifica no texto
+   href~="google" é parecido com o * mas ele pega uma palavra especifica, por exemplo: attr="google bing", considerando o espaco
+   href|="value", considera os que comeca com esse valor, tem que estar separado por um - , exemplo: "google-bing".
+   href^="value" inicia com essa palavra
+   href$="value" termina com essa palavra
+   
+*/
+
+a [href] {
+    background-color: yellow;
+}
+
+
+
+
+
+
+/* 10 */
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* Position -> fixed mantem fixo na minha tela, absolut posicao absoluta no documento baseada nos atributos top, right, left, bottom em px, relative é relativo a onde se inicia a posicao, ou seja ele tem um ponto de partida, podendo mudar apartir do top right...
+    , collapse (colidir) deixa as bordar encostar */
+
+/*
+table{
+    width:900px;
+    margin:0 auto;
+    border-collapse:collapse;
+}
+
+table tr td{
+    border:1px solid black;
+}
+*/
+
+.menu-fixed {
+    position: fixed;
+    width: 100%;
+    height: 200px;
+    background-color: #e55f5f;
+}
+
+.box4 {
+    width: 100%;
+    height: 1400px;
+    background-color: aqua;
+}
+
+
+
+
+
+
+/* 11 */
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* Background, ../ volta para o diretorio anterior 
+   size: largura altura/cover cobre toda a area, contain deixa a imagem visivel
+   position: eixo x eixo y/um valor equivale para os dois
+   attachment: como o background deve ser anexado, fixo, scroll(padrao)
+*/
+
+.bg {
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    /* Backgrounds */
+    background-color: #29ff08;
+    background-image: url(../imagens/imagem.jpg);
+    background-size: 400px 550px;
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+
+.box100 {
+    width: 100%;
+    height: 2000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.iten {
+    width: 33.3%;
+    display: inline-block;
+    margin-right: -4px;
+    background-color: aqua;
+}
+
+    .iten img {
+        border-radius: 50%;
+        width: 250px;
+    }
+
+
+
+
+
+
+/* 12 */
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* PseudoClass, hover: faz algo quando o mouse é passado por cima
+   active: quando o mouse é pressionado
+   focus: quando algo fica em foco, por exemplo voce clicar para digitar um texto em um imput type: text
+   link e visited é relacionado ao link, mas nao funciona corretamente em todos os navegadores
+   nth-of-type: no exemplo: li:nth-of-type(2) eu estou dizendo para modificar o segundo li
+   nth-child: modifica o filho da minha classe
+   last-type-of: igual o nth-of-type, mas com o ultimo eleemnto
+   not, que nao tenha, mais usavel se for com uma classe, por exemplo :not(.class)
+   empty, que esteja vazio
+   checked, quando o select estiver selecionado
+   after, aplique apos a execucao da classe    
+   before, antes
+   2n + 1: comeca do 1, e a cada 2 aplique os atributos 
+   caso queira aplicar mais de uma subclasse ao mesmo tempo, so colocar : e a que voce quiser, exemplo: .it:first-child:hover*/
+
+
+/*
+.teste, .teste1, .teste2{
+    margin-top:30px;
+    margin-left:30px;
+    display:inline-block;
+    vertical-align:top;
+    width:300px;
+    height:300px;
+    background-color:black;
+}
+
+.teste1{
+    background-color:darkblue;
+}
+
+.teste2 {
+    background-color: indigo;
+}
+
+
+.teste:hover{
+    height:900px;
+    background-color:aqua;
+}
+
+    
+.teste:active {
+    background-color: aqua;
+}
+
+
+.teste:focus {
+    background-color: aqua;
+}
+
+
+.linko:visited{
+    color:aqua;
+}
+
+
+.linko:link{
+    color:orangered;
+}
+
+
+ul{
+    list-style:inside;
+}
+
+
+ul li:nth-of-type(2){
+    color:red;
+}
+
+
+ul :nth-child(3){
+    color:aquamarine;
+}
+*/
+
+.teste {
+    width: 100%;
+    height: 100%;
+}
+
+/* border-box faz com que as coisas vao para dentro, exemplo a minha borda,a o invez que criar fora e aumentar o tamanho do meu it*/
+.it {
+    box-sizing: border-box;
+    float: left;
+    width: 33.3%;
+    height: 400px;
+    background-color: indigo;
+    border: 1px solid black;
+}
+
+
+.teste .it:first-child:hover {
+    background-color: aqua;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+/*
+.teste div:last-of-type, .teste :nth-child(1) {
+    background-color: #d020a1;
+}
+
+
+.teste div:last-of-type p{
+    text-align:center;
+    font-size:24px;
+    font-family:Arial;
+    font-style:italic;
+    color:burlywood;
+}
+ */
+
+
+
+
+
+
+/* 13 */
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* Formulario, estilizando o formulario */
+
+form {
+    width: 96%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+    form fieldset {
+        border: 2px solid black;
+    }
+
+    form legend {
+        margin-left: 55px;
+        text-align: left;
+        font-size: 17px;
+        color: #f7b3b3;
+    }
+
+    form input[type="text"], input[type="email"], input[type="password"] {
+        width: 80%;
+        margin: 7px auto;
+        padding: 4px 0px;
+    }
+
+    form input:focus, form select:focus {
+        outline: 0;
+        background-color: #f7b3b3;
+    }
+
+    /*Calc, esta fazendo uma conta aritmetica,exemplo: calc (40% + 10px) no caso adicionando 10px de largura nos 40% ja definido*/
+
+    form select {
+        width: calc(80% + 4px);
+        margin: 7px auto;
+        padding: 4px 0px;
+    }
+
+    form label {
+        color: black;
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    form h5 {
+        margin-top: 7px;
+    }
+
+.radio-input span {
+    font-size: 16px;
+    margin-left: 6px;
+}
+
+.radio-input {
+    display: inline-block;
+    text-align: left;
+    margin: 4px auto;
+}
+
+form textarea {
+    width: 80%;
+    margin: 7px auto;
+    padding: 4px 4px;
+    resize: none;
+    height: 100px;
+    font-size: 16px;
+}
+
+form input[type=submit] {
+    margin: 7px 0px;
+    border: 1px solid black;
+    background-color: transparent;
+    font-size: 16px;
+    color: black;
+    padding: 10px 24px;
+    cursor: pointer;
+}
+
+    form input[type=submit]:hover {
+        background-color: #f7b3b3;
+    }
+
+
+
+
+
+
+/* FORM_FILE */
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/*form_file, -webkit (navegadores baseados no chrome)- -moz(mozila)- -ms(explorer)- pré-fixos para mudar algo do navegadores em especifico, por exemplo appearance:none que reseta a aparencia de algo*/
+/*Label por padrao é display inline, o que significa que nao consigo alterar suas dimensoes, por isso coloquei o inline-block*/
+
+.file [type="file"] {
+    display: none;
+}
+
+.file label {
+    display: inline-block;
+    cursor: pointer;
+    width: 220px;
+    height: 40px;
+    background-color: #f7b3b3;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 40px;
+}
