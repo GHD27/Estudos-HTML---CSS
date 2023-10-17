@@ -1,0 +1,27 @@
+/*Documento padrão, resetando o CSS e setando o meu root*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+	font-size: 62.5%;
+
+	/*Variáveis para serem utilizadas diversas vezes no meu projeto*/
+
+	--hue: 100;
+	--color-base-white: hsl(0, 0%, 100%);
+	--color-base-blue-100: hsl(195, 91%, 25%);
+	--color-base-blue-500: hsl(240, 5%, 7%);
+	--color-base-blue-900: hsl(240, 6%, 13%);
+}
+
+html,
+body,
+input {
+	font-family: 'Mulish', sans-serif;
+}
