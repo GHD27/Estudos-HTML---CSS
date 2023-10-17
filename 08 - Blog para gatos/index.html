@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<!--Fonts-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<!-- general meta tags -->
 		<meta charset="utf-8" />
 		<meta name="author" content="" />
@@ -10,6 +13,8 @@
 		<!-- style sheets -->
 		<link rel="stylesheet" href="css-reset.css" />
 		<link rel="stylesheet" href="style.css" />
+		<!--Fonts-->
+		<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<div id="app">
@@ -19,16 +24,19 @@
         ==========================================================
       -->
 
-			<header class="container">
-				<img src="./assets/paw.svg" alt="Ícone de uma pata" />
+			<header>
+				<div class="container">
 
-				<form>
-					<div class="input-wrapper">
-						<input id="search" type="text" placeholder="Pesquise por artigos" />
-					</div>
-				</form>
-
-				<img class="avatar" src="https://randomuser.me/api/portraits/women/22.jpg" alt="Imagem de uma mulher" />
+					<img class="icon"src="./assets/paw.svg" alt="Ícone de uma pata" />
+					
+					<form>
+						<div class="input-wrapper">
+							<input id="search" type="text" placeholder="Pesquise por artigos" />
+						</div>
+					</form>
+					
+					<img class="avatar" src="https://randomuser.me/api/portraits/women/22.jpg" alt="Imagem de uma mulher" />
+				</div>
 			</header>
 
 			<!--
@@ -54,79 +62,52 @@
               </br> </br>Além disso, há teóricos que acreditam que os felinos possuem habilidades telepáticas e são capazes de se comunicar com outras espécies alienígenas. Essa crença baseia-se em relatos de pessoas que afirmam terem visto gatos reagindo a estímulos que não são perceptíveis aos seres humanos, ou até mesmo se comportando de maneira incomum durante eventos astronômicos, como uma aurora boreal. Esses e outros indícios foram interpretados como sinais de que os gatos seriam seres interplanetários.
               </p>
 						</article>
-
-						<aside>
-							<h1>Artigos relacionados</h1>
-
-                <div class="articles">
-
-                  
-                    <img src="./assets/02.jpg" alt="Gatinho branco com fundo verde" />
-                  
-
-                  <div class="text">
-                    <h2>Sábado preguiçoso</h2>
-                    <p>Descubra atividades interessantes para fazer com seu pet durante os finais de semana.</p>
-                  </div>
-
-                </div>
-                
-                <div class="articles">
-
-                  <div class="image">
-                    <img src="./assets/03.jpg" alt="Gatinhos filhotes dentro de uma cesta no meio de um parque" />
-                  </div>
-
-                  <div class="text">
-                    <h2>Balaio de gatos</h2>
-                    <p>Como evitar confusões entre seus gatíneos e acostumá-los desde filhotes.</p>
-                  </div>
-
-							  </div>
-              
-							  <div class="articles">
-
-                  <div class="image">
-                    <img src="./assets/04.jpg" alt="Gatinho olhando para tras com parede colorida ao fundo" />
-                  </div>
-
-                  <div class="text">
-								    <h2>Cartela de cores</h2>
-								    <p>Seu gato é inverno intenso? Verão profundo? Descubra as cores que mais combinam com seu bichano.</p>
-                  </div>
-
-							  </div>
-              
-							  <div class="articles">
-
-                  <div class="image">
-                    <img src="./assets/05.jpg" alt="gatinho coberto e deitado" />
-                  </div>
-
-                  <div class="text">
-								    <h2>Os gatos sentem frio?</h2>
-								    <p>Preparem-se para a frente fria que vem para o país da melhor maneira possível.</p>
-                  </div>
-
-							  </div>
-              
-							  <div class="articles">
-
-                  <div class="image">
-                    <img src="./assets/06.jpg" alt="Gatinho em cima de uma capa" />
-                  </div>
-                  
-                  <div class="text">
-								    <h2>Conheça o Moacir</h2>
-								    <p>Moacir é o gatinho da semana do nosso blog. Venha conhecer sua história de superação.</p>
-                  </div>
-
-							  </div>
-
-						</aside>
 					</section>
 				</div>
 			</main>
+
+			<aside>
+				<div class="container">
+						<h1>Artigos relacionados</h1>
+						<ul class="articles">
+								<li><a href="">
+										<img src="./assets/02.jpg" alt="Gato 1">
+										<span class="cont">
+												<h2>Sábado preguiçoso</h2>
+												<p>Descubra atividades interessantes para fazer com seu pet durante os finais de semana.</p>
+										</span>
+								</a></li>
+								<li><a href="">
+										<img src="./assets/03.jpg" alt="Gato 2">
+										<span class="cont">
+												<h2>Balaio de gatos</h2>
+												<p>Descubra atividades interessantes para fazer com seu pet durante os finais de semana.</p>
+										</span>
+								</a></li>
+								<li><a href="">
+										<img src="./assets/04.jpg" alt="Gato 3">
+										<span class="cont">
+												<h2>Sábado preguiçoso</h2>
+												<p>Como evitar confusões entre seus gatíneos e acostumá-los desde filhotes.</p>
+										</span>
+								</a></li>
+								<li><a href="">
+										<img src="./assets/05.jpg" alt="Gato 4">
+										<span class="cont">
+												<h2>Cartela de cores</h2>
+												<p>Seu gato é inverno intenso? Verão profundo? Descubra as cores que mais combinam com seu bichano.</p>
+										</span>   
+								</a></li>
+								<li><a href="">
+										<img src="./assets/06.jpg" alt="Gato 5">
+										<span class="cont">
+												<h2>Os gatos sentem frio?</h2>
+												<p>Preparem-se para a frente fria que vem para o país da melhor maneira possível.</p>
+										</span>
+								</a></li>
+						</ul>
+				</div>
+		</aside>
 
 			<!--
       ==========================================================
@@ -134,7 +115,7 @@
       ==========================================================
     -->
 
-			<footer class="container">
+			<footer>
 				<p>© 2023 - Gabriel HD Silva</p>
 			</footer>
 		</div>

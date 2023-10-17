@@ -20,6 +20,9 @@
 	--color-base-blue-900: hsl(240, 6%, 13%);
 }
 
+ul {
+	list-style: none;
+}
 html,
 body,
 input {

@@ -12,7 +12,11 @@ body {
 
 #app {
 	display: grid;
-	grid-template-rows: max-content 1fr max-content;
+	grid-template-areas:
+		'header header'
+		'main main'
+		'aside aside'
+		'footer footer';
 	height: 100vh;
 }
 /*
@@ -20,28 +24,26 @@ body {
 HEADER
 =====================================================================================================================
 */
-
 header {
-	padding: 1.2rem 2.8rem;
+	grid-area: header;
+	padding: 1.2rem 3rem;
+}
+header .container {
 	display: flex;
-	justify-content: space-around;
 	align-items: center;
+	justify-content: space-between;
 	gap: 2.6rem;
 }
 
 header form {
 	flex: 1;
 }
-header .avatar {
+header .avatar,
+.icon {
 	width: 4.2rem;
 	height: 4.2rem;
 
 	border-radius: 999px;
-}
-
-header > :first-child(img) {
-	width: 4.2rem;
-	height: 4.2rem;
 }
 
 .input-wrapper input {
@@ -68,8 +70,8 @@ MAIN
 */
 
 main {
+	grid-area: main;
 	background-color: var(--color-base-white);
-	overflow-y: scroll;
 }
 
 /*
@@ -86,7 +88,7 @@ MODIFICANDO OS BOTOES DA PAGINA
 
 .button-wrapper {
 	display: flex;
-	gap: 12;
+	gap: 1.2rem;
 	margin-top: 0.8rem;
 }
 
@@ -116,6 +118,14 @@ MODIFICANDO OS BOTOES DA PAGINA
 	cursor: pointer;
 }
 
+.button-wrapper .btn1:hover {
+	background-color: green;
+}
+
+.button-wrapper .btn2:hover {
+	background-color: red;
+}
+
 main section {
 	padding: 3.2rem 2.2rem;
 }
@@ -139,40 +149,41 @@ main article p {
 	margin-top: 3.2rem;
 }
 
-main aside h1 {
-	margin-top: 3.2rem;
-}
-
 /*
 Ajustando o meu aside
 */
 aside {
+	grid-area: aside;
+	background-color: var(--color-base-white);
+	padding: 0rem 2.2rem 4rem;
+}
+
+aside .container {
 	display: flex;
 	flex-direction: column;
+	gap: 2.2rem;
+}
 
+aside .articles {
+	display: flex;
+	flex-direction: column;
 	gap: 3.2rem;
 }
-.articles {
-	display: grid;
-	grid-template-areas:
-		'A A B'
-		'A A C';
-
-	column-gap: 1.6rem;
-	align-items: center;
+aside .articles a {
+	text-decoration: none;
+	display: flex;
+	gap: 3.2rem;
 }
 
 .articles img {
-	grid-area: A;
 	width: 15.1rem;
+	height: 8.4rem;
 
 	object-fit: cover;
 	border-radius: 5px;
-	border: 1px solid black;
 }
 
-.articles h2 {
-	grid-area: B;
+.articles a span h2 {
 	color: var(--color-base-blue-900);
 	font-size: 1.8rem;
 	font-weight: 700;
@@ -194,10 +205,50 @@ FOOTER
 */
 
 footer {
+	grid-area: footer;
 	padding: 1.6rem;
+	font-weight: 600;
+}
 
+footer p {
 	text-align: center;
 	color: var(--color-base-white);
+}
 
-	font-weight: 600;
+@media (min-width: 1280px) {
+	#app {
+		display: grid;
+		grid-template-areas:
+			'header header'
+			'main aside'
+			'main aside'
+			'footer footer';
+		height: 100vh;
+	}
+
+	header .container {
+		margin: 0 auto;
+		max-width: 115rem;
+	}
+
+	header {
+		grid-area: header;
+		padding: 1.2rem 12rem;
+	}
+
+	main .container {
+		margin: 4rem 3.4rem 3.2rem 10.9rem;
+		width: 80.3rem;
+	}
+
+	main #header_img {
+		width: 80.3rem;
+		height: 40.5rem;
+		border-radius: 5px;
+	}
+
+	aside {
+		padding-top: 3.4rem;
+		padding-right: 11rem;
+	}
 }
