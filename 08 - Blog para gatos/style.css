@@ -6,7 +6,7 @@ BASE
 
 body {
 	font-size: 1.6rem;
-	background-color: var(--color-base-blue-100);
+	background-color: var(--color-base-white);
 	color: var(--color-base-blue-500);
 }
 
@@ -17,7 +17,7 @@ body {
 		'main main'
 		'aside aside'
 		'footer footer';
-	height: 100vh;
+	width: 100%;
 }
 /*
 =====================================================================================================================
@@ -27,6 +27,8 @@ HEADER
 header {
 	grid-area: header;
 	padding: 1.2rem 3rem;
+	background-color: var(--color-base-blue-100);
+	width: 100%;
 }
 header .container {
 	display: flex;
@@ -193,7 +195,6 @@ aside .articles a {
 .articles p {
 	grid-area: C;
 	color: var(--color-base-blue-500);
-	font-family: Mulish;
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 160%; /* 22.4px */
@@ -208,6 +209,7 @@ footer {
 	grid-area: footer;
 	padding: 1.6rem;
 	font-weight: 600;
+	background-color: var(--color-base-blue-100);
 }
 
 footer p {
@@ -215,7 +217,7 @@ footer p {
 	color: var(--color-base-white);
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1440px) {
 	#app {
 		display: grid;
 		grid-template-areas:
@@ -223,32 +225,39 @@ footer p {
 			'main aside'
 			'main aside'
 			'footer footer';
-		height: 100vh;
+
+		min-height: 100vh;
 	}
 
 	header .container {
 		margin: 0 auto;
 		max-width: 115rem;
+		align-items: center;
 	}
 
 	header {
 		grid-area: header;
-		padding: 1.2rem 12rem;
+		align-content: center;
 	}
 
 	main .container {
 		margin: 4rem 3.4rem 3.2rem 10.9rem;
-		width: 80.3rem;
+		min-width: 80rem;
 	}
 
 	main #header_img {
-		width: 80.3rem;
-		height: 40.5rem;
+		width: 100%;
+		max-height: 60rem;
 		border-radius: 5px;
+		object-fit: cover;
 	}
 
 	aside {
 		padding-top: 3.4rem;
 		padding-right: 11rem;
+	}
+
+	footer {
+		max-height: 6.4rem;
 	}
 }
